@@ -1,0 +1,36 @@
+<h1>Hello</h1>
+
+<!-- <form>
+  <form class="example-form">
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Favourite Food</mat-label>
+      <input matInput placeholder="Ex. Pizza" value="Sushi" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of options" [value]="option">
+          {{option.name}} - {{option.price}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+</form> -->
+
+Accessing the service through Component class<br>
+<button type="button" (click)="getProd1()">p1</button>
+<ul><li *ngFor="let i of prod1">
+
+  {{i}}
+
+</li></ul>
+<br>
+
+Directly accessing the service through html<br>
+<button type="button" (click)='dService.getP3()'>p3</button>
+{{dService.p3.name}} - {{dService.p3.item}} - {{dService.p3.seller}}
+
+<br>
+<button type="button" (click)="fetchData()">webData</button>
+<ul><li *ngFor="let i of webdata">
+  {{i.author}}
+</li></ul>
+<br>
+
+<button type="button" (click)="insertData()">Insert</button>
